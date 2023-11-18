@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download File</title>
+</head>
+<body>
+    <button onclick="downloadFile('https://store.brewology.com/get/homebrew.php?id=24&fid=2171')">Download File</button>
+    <script>
+        function downloadFile(fileUrl) {
+            var anchor = document.createElement('a');
+            anchor.href = fileUrl;
+            anchor.download = fileUrl.split('/').pop();
+            anchor.click();
+        }
+    </script>
+</body>
+</html>
+
